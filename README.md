@@ -18,36 +18,72 @@ An **interactive Vision-Language Model (VLM) playground** that:
 ---
 
 ## 📂 Project Structure
+```
 /vlm-playground
-├── app.py # Gradio UI
-├── vlm_utils.py # BLIP & GIT models + classification logic
-├── test_images/ # Sample images
-├── vlm_results_ui.txt # Log for single image mode
-├── sample_results.csv # Example batch output
-└── README.md # Project documentation
+├── app.py               # Gradio UI
+├── vlm_utils.py         # BLIP & GIT models + classification logic
+├── test_images/         # Sample images
+├── vlm_results_ui.txt   # Log for single image mode
+├── sample_results.csv   # Example batch output
+└── README.md            # Project documentation
+```
+
+---
 
 ## ⚡ Quick Start (Google Colab)
 
 1. **Open in Colab**  
-   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](YOUR_COLAB_LINK)
+  
 
 2. **Install dependencies**:
 ```python
 %pip install gradio pandas transformers torchvision timm accelerate Pillow
+```
 
 3. **Run the app**:
-
+```python
 import gradio as gr
+# paste the app.py code here
+```
 
+4. **Click the public link** shown in Colab to access the app.
 
-4. **Click the public link shown in Colab to access the app.**
+---
 
 ## 💻 Running Locally
-
+```bash
 git clone https://github.com/YOUR_USERNAME/vlm-playground.git
 cd vlm-playground
 pip install -r requirements.txt
 python app.py
+```
+Open `http://127.0.0.1:7860` in your browser.
+
+---
+
+## 📊 Sample Output
+
+| Image Name           | Caption                                      | Category | Agent Trace                          |
+|----------------------|----------------------------------------------|----------|---------------------------------------|
+| banana.jpg           | a photo of two bananas                       | Fruit    | BLIP > Classified: Fruit              |
+| papaya.jpg           | a slice of papaya                            | Fruit    | BLIP > Classified: Fruit              |
+| broccoli.jpg         | a photo of chopped broccoli                  | Vegetable| BLIP retry > Classified: Vegetable    |
+| cinnamon.jpg         | a photo of cinnamon sticks and powder        | Spice    | BLIP > Classified: Spice              |
+
+---
+---
+
+## 📌 Future Improvements
+- Better classification with fuzzy matching for typos.
+- Integration with other VLMs (SmolVLM, NanoVLM).
+- Deployment on Jetson Nano for real-time camera captioning.
+
+---
+
+## 📜 License
+MIT License. Author - Eby J Kavungal
+
+
 
 
 
