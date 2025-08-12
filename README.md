@@ -35,4 +35,19 @@ An **interactive Vision-Language Model (VLM) playground** that:
 ```python
 %pip install gradio pandas transformers torchvision timm accelerate Pillow
 
+3. **Run the app**:
+
+import gradio as gr
+
+
+4. **Click the public link shown in Colab to access the app.**
+
+## 💻 Running Locally
+
+git clone https://github.com/YOUR_USERNAME/vlm-playground.git
+cd vlm-playground
+pip install -r requirements.txt
+python app.py
+
+
 
